@@ -1,0 +1,45 @@
+.logo {
+  float: left;
+}
+
+.btn {
+  background: #34495e;
+  border: 0;
+  color: #fff;
+  /* float: right; */
+  display: block;
+  width: auto;
+  border-radius: 4px;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-left: 1em;
+  /* line-height: 40px; */
+  cursor: pointer;
+}
+
+.container {
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.5em;
+  margin-right: 2em;
+}
+
+@media (min-width: 668px) {
+  .container {
+    margin-right: 5em;
+  }
+  .insta {
+    max-height: 2.7vh;
+  }
+}
+
+.nav {
+  float: right;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}

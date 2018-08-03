@@ -1,0 +1,42 @@
+.btn,
+.menuBtn {
+  background: #34495e;
+  border: 0;
+  color: #fff;
+  display: block;
+  width: auto;
+  margin-left: 1em;
+  border-radius: 4px;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  cursor: pointer;
+}
+
+.menuBtn {
+  border: 2px solid black;
+}
+
+.menu {
+  background: #fff;
+  border-radius: 4px;
+  list-style-type: none;
+  width: 120%;
+  padding: 3px;
+  position: absolute;
+  top: 100%;
+  margin-left: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.item {
+  border-bottom: 1px solid lightgrey;
+  cursor: pointer;
+  /* text-align: center; */
+}
+
+.container {
+  width: auto;
+  position: relative;
+}
