@@ -1,6 +1,7 @@
 .btn,
 .menuBtn {
-  background: #34495e;
+  /* background: #34495e; */
+  background-color: rgb(72, 81, 103);
   border: 0;
   color: #fff;
   display: block;
@@ -12,6 +13,7 @@
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   cursor: pointer;
+  box-shadow: 1px 2px 8px black;
 }
 
 .menuBtn {

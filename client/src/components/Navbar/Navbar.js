@@ -6,10 +6,7 @@ const Navbar = props => {
   const isMobile = props.width <= 667;
   return (
     <nav
-      className={
-        styles.nav +
-        " navbar navbar-expand-lg fixed-top navbar-light bg-success"
-      }
+      className={styles.nav + " navbar navbar-expand-lg fixed-top navbar-light"}
     >
       <a href="/">
         <h1 className={styles.logo}>VB</h1>
@@ -21,10 +18,14 @@ const Navbar = props => {
         </div>
       ) : (
         <div className={styles.container}>
-          <button className={styles.btn}>About</button>
+          <button className={styles.btn} onClick={props.scrollTarget}>
+            About
+          </button>
           {/* <DropDownMenu /> */}
           {props.children}
-          <button className={styles.btn}>Contact</button>
+          <button className={styles.btn} onClick={props.openMod}>
+            Contact
+          </button>
 
           <a
             className={styles.btn}

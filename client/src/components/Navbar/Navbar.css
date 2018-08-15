@@ -1,9 +1,13 @@
 .logo {
   float: left;
+  font-family: "Oleo Script Swash Caps", cursive;
+  color: rgb(63, 105, 170);
+  text-shadow: 1px 1px 8px black;
 }
 
 .btn {
-  background: #34495e;
+  /* background: #34495e; */
+  background-color: rgb(72, 81, 103);
   border: 0;
   color: #fff;
   /* float: right; */
@@ -17,6 +21,7 @@
   margin-left: 1em;
   /* line-height: 40px; */
   cursor: pointer;
+  box-shadow: 1px 2px 8px black;
 }
 
 .container {
@@ -42,4 +47,5 @@
   display: block;
   text-align: center;
   text-decoration: none;
+  background-color: rgb(127, 65, 69);
 }

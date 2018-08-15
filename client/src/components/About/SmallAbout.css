@@ -1,0 +1,33 @@
+.container {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  background-color: #eae6da;
+}
+
+.block {
+  width: 90%;
+  height: 80%;
+  margin: 10%;
+  padding: 1em;
+  /* display: flex;
+  justify-content: center; */
+  background-color: #d1b894;
+}
+
+.aboutPic {
+  width: 80%;
+  height: 50%;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.title {
+  margin: 1em;
+  text-align: center;
+}
+
+.content {
+  margin: 2em;
+}

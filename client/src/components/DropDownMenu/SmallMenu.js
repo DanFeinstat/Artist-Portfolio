@@ -70,8 +70,12 @@ class SmallMenu extends React.Component {
             <li className={styles.item} onClick={this.scrollToGallery}>
               Signage
             </li>
-            <li className={styles.item}>About</li>
-            <li className={styles.item}>Contact</li>
+            <li className={styles.item} onClick={this.scrollToGallery}>
+              About
+            </li>
+            <li className={styles.item} onClick={this.props.openMod}>
+              Contact
+            </li>
             <a
               href="https://www.instagram.com/?hl=en"
               target="_blank"

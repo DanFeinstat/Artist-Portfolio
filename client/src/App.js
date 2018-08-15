@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import Navbar from "./components/Navbar/Navbar";
 import SmallMenu from "./components/DropDownMenu/SmallMenu";
 import DropDownMenu from "./components/DropDownMenu/DropDownMenu";
@@ -8,12 +9,14 @@ import GalleryArtNav from "./components/GalleryNav/GalleryArtNav";
 import Gallery from "./components/Galleries/Gallery";
 import Thumbnail from "./components/Galleries/Thumbnail";
 import Modal from "./components/Galleries/Modal";
+import ContactModal from "./components/Contact/ContactModal";
+import About from "./components/About/About";
+import SmallAbout from "./components/About/SmallAbout";
 
 class App extends Component {
   state = {
     width: window.innerWidth,
     modal: null,
-    // gallery: null,
   };
   componentWillMount() {
     window.addEventListener("resize", this.handleWindowSizeChange);
@@ -27,10 +30,11 @@ class App extends Component {
     this.setState({ width: window.innerWidth });
   };
 
-  selectGallery = event => {
-    event.preventDefault();
-    console.log("gallery");
-    this.setState({ gallery: "gallery" });
+  scrollToTarget = e => {
+    let name = e.target.innerHTML;
+    console.log(name);
+    let galleryDiv = ReactDOM.findDOMNode(document.getElementById(name));
+    galleryDiv.scrollIntoView({ behavior: "smooth" }, true);
   };
 
   openModal = e => {
@@ -42,12 +46,33 @@ class App extends Component {
     this.setState({ modal: null });
   };
 
+  openContactModal = e => {
+    e.preventDefault();
+    this.setState({ contactModal: true });
+  };
+  closeContactModal = e => {
+    e.preventDefault();
+    this.setState({ contactModal: null });
+  };
+
   render() {
     const isMobile = this.state.width <= 667;
+    const isIpad = this.state.width <= 769;
     return (
       <div>
-        <Navbar width={this.state.width}>
-          {isMobile ? <SmallMenu /> : <DropDownMenu />}
+        <Navbar
+          width={this.state.width}
+          openMod={this.openContactModal}
+          scrollTarget={this.scrollToTarget}
+        >
+          {isMobile ? (
+            <SmallMenu
+              openMod={this.openContactModal}
+              // scrollTarget={this.scrollToTarget}
+            />
+          ) : (
+            <DropDownMenu />
+          )}
         </Navbar>
         <Jumbotron />
         <Gallery title="Gallery Artwork">
@@ -56,13 +81,11 @@ class App extends Component {
         <Gallery title="Illustrations" />
         <Gallery title="Portraiture" />
         <Gallery title="Signage" />
-        {/* <GalleryNav>
-          <GalleryArtNav gallery="Gallery Art" onClick={this.selectGallery} />
-          <GalleryArtNav gallery="Illustrations" />
-          <GalleryArtNav gallery="Portraiture" />
-          <GalleryArtNav gallery="Signage" />
-        </GalleryNav> */}
+        {isIpad ? <SmallAbout /> : <About />}
         {this.state.modal ? <Modal onSomeEvent={this.closeModal} /> : null}
+        {this.state.contactModal ? (
+          <ContactModal onSomeEvent={this.closeContactModal} />
+        ) : null}
       </div>
     );
   }

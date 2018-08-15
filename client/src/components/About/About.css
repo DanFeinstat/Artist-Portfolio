@@ -1,0 +1,51 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #eae6da;
+}
+
+.third {
+  float: left;
+  clear: left;
+  width: 30%;
+  height: 80%;
+  margin-right: 1.25%;
+  margin-left: 3.75%;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.aboutPic {
+  width: 90%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.twoThirds {
+  float: right;
+  clear: right;
+  width: 60%;
+  height: 80%;
+  margin-right: 3.75%;
+  margin-left: 1.25%;
+  display: flex;
+  align-items: center;
+}
+
+.contentContainer {
+  height: 80%;
+  padding: 1em;
+  background-color: #d1b894;
+}
+
+.title {
+  margin: 1em;
+  text-align: center;
+}
+
+.content {
+  margin: 2em;
+}
