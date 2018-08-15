@@ -1,54 +1,43 @@
-import React, { Component } from "react";
+import React from "react";
 import styles from "./Navbar.css";
-import DropDownMenu from "../DropDownMenu/DropDownMenu";
-import SmallMenu from "../DropDownMenu/SmallMenu";
 import instaIcon from "../../img/icons/instagram.svg";
 
-class Navbar extends Component {
-  state = {
-    width: window.innerWidth,
-  };
-  componentWillMount() {
-    window.addEventListener("resize", this.handleWindowSizeChange);
-  }
+const Navbar = props => {
+  const isMobile = props.width <= 667;
+  return (
+    <nav
+      className={
+        styles.nav +
+        " navbar navbar-expand-lg fixed-top navbar-light bg-success"
+      }
+    >
+      <a href="/">
+        <h1 className={styles.logo}>VB</h1>
+      </a>
+      {isMobile ? (
+        <div className={styles.container}>
+          {/* <SmallMenu /> */}
+          {props.children}
+        </div>
+      ) : (
+        <div className={styles.container}>
+          <button className={styles.btn}>About</button>
+          {/* <DropDownMenu /> */}
+          {props.children}
+          <button className={styles.btn}>Contact</button>
 
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.handleWindowSizeChange);
-  }
-
-  handleWindowSizeChange = () => {
-    this.setState({ width: window.innerWidth });
-  };
-  render() {
-    const { width } = this.state;
-    const isMobile = width <= 667;
-    return (
-      <nav
-        className={
-          styles.nav +
-          " navbar navbar-expand-lg fixed-top navbar-light bg-success"
-        }
-      >
-        <a href="/">
-          <h1 className={styles.logo}>VB</h1>
-        </a>
-        {isMobile ? (
-          <div className={styles.container}>
-            <SmallMenu />
-          </div>
-        ) : (
-          <div className={styles.container}>
-            <button className={styles.btn}>About</button>
-            <DropDownMenu />
-            <button className={styles.btn}>Contact</button>
-            <button className={styles.btn}>
-              <img className={styles.insta} src={instaIcon} alt="Instagram" />
-            </button>
-          </div>
-        )}
-      </nav>
-    );
-  }
-}
+          <a
+            className={styles.btn}
+            href="https://www.instagram.com/?hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={styles.insta} src={instaIcon} alt="Instagram" />
+          </a>
+        </div>
+      )}
+    </nav>
+  );
+};
 
 export default Navbar;

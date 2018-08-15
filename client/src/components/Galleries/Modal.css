@@ -1,0 +1,41 @@
+.modal {
+  /* modal container fixed across whole screen */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* z-index must be higher than .modal-background */
+  z-index: 9999;
+
+  /* enables scrolling for tall modals */
+  overflow: auto;
+  border-radius: 10px;
+}
+
+.image {
+  width: 90vw;
+  height: auto;
+  margin-right: 5vw;
+  margin-left: 5vw;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  border-radius: 10px;
+}
+
+.backdrop {
+  /* modal background fixed across whole screen */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* semi-transparent black  */
+  background-color: #000;
+  opacity: 0.75;
+
+  /* z-index must be below .modal and above everything else  */
+  z-index: 9998;
+}

@@ -1,0 +1,20 @@
+.gnBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  margin: 1em;
+  background-color: grey;
+  padding: 1em;
+}
+
+.wrapper {
+  display: flex;
+}
+
+@media (min-width: 668px) {
+  .gnBtn {
+    /* height: 15vh; */
+    width: 20vw;
+  }
+}

@@ -1,6 +1,7 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import styles from "./DropDownMenu.css";
-import menuIcon from "../../img/icons/menu.svg";
+// import menuIcon from "../../img/icons/menu.svg";
 
 class DropDownMenu extends React.Component {
   constructor() {
@@ -49,6 +50,13 @@ class DropDownMenu extends React.Component {
     this.toggleMenu();
   }
 
+  scrollToGallery = e => {
+    let name = e.target.innerHTML;
+    console.log(name);
+    let galleryDiv = ReactDOM.findDOMNode(document.getElementById(name));
+    galleryDiv.scrollIntoView({ behavior: "smooth" }, true);
+  };
+
   render() {
     return (
       <div
@@ -62,10 +70,18 @@ class DropDownMenu extends React.Component {
         </button>
         {this.state.showMenu && (
           <ul className={styles.menu}>
-            <li className={styles.item}>Signage</li>
-            <li className={styles.item}>Portraiture</li>
-            <li className={styles.item}>Illustrations</li>
-            <li className={styles.item}>Gallery Artwork</li>
+            <li className={styles.item} onClick={this.scrollToGallery}>
+              Gallery Artwork
+            </li>
+            <li className={styles.item} onClick={this.scrollToGallery}>
+              Illustrations
+            </li>
+            <li className={styles.item} onClick={this.scrollToGallery}>
+              Portraiture
+            </li>
+            <li className={styles.item} onClick={this.scrollToGallery}>
+              Signage
+            </li>
           </ul>
         )}
       </div>

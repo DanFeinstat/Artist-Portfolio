@@ -1,0 +1,14 @@
+.gallery {
+  min-height: 80vh;
+  background-color: slategrey;
+}
+
+.title {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: auto;
+  padding: 0.5em;
+  text-align: center;
+  color: white;
+  border-bottom: white solid 2px;
+}

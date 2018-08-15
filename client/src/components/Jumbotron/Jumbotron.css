@@ -1,0 +1,35 @@
+.jumbo {
+  background: url("../../img/photos/squiggly.jpg");
+  /* background-size: cover;
+  background-repeat: no-repeat; */
+  height: 80vh;
+  margin: 0;
+}
+.clear {
+  margin-left: 20vw;
+  width: 100%;
+  float: right;
+  clear: right;
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+@media (min-width: 769px) {
+  .jumbo {
+    background: url("../../img/photos/papers.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    margin: 0;
+  }
+
+  .clear {
+    margin-left: 10vw;
+    margin-top: 10vh;
+  }
+}

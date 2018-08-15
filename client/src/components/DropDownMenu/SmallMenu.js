@@ -1,6 +1,8 @@
 import React from "react";
-import styles from "./DropDownMenu.css";
+import ReactDOM from "react-dom";
+import styles from "./SmallMenu.css";
 import menuIcon from "../../img/icons/menu.svg";
+import instaIcon from "../../img/icons/instagram.svg";
 
 class SmallMenu extends React.Component {
   constructor() {
@@ -36,6 +38,13 @@ class SmallMenu extends React.Component {
     this.toggleMenu();
   }
 
+  scrollToGallery = e => {
+    let name = e.target.innerHTML;
+    console.log(name);
+    let galleryDiv = ReactDOM.findDOMNode(document.getElementById(name));
+    galleryDiv.scrollIntoView({ behavior: "smooth" }, true);
+  };
+
   render() {
     return (
       <div
@@ -49,13 +58,29 @@ class SmallMenu extends React.Component {
         </button>
         {this.state.showMenu && (
           <ul className={styles.menu}>
-            <li className={styles.item}>Signage</li>
-            <li className={styles.item}>Portraiture</li>
-            <li className={styles.item}>Illustrations</li>
-            <li className={styles.item}>Gallery Artwork</li>
+            <li className={styles.item} onClick={this.scrollToGallery}>
+              Gallery Artwork
+            </li>
+            <li className={styles.item} onClick={this.scrollToGallery}>
+              Illustrations
+            </li>
+            <li className={styles.item} onClick={this.scrollToGallery}>
+              Portraiture
+            </li>
+            <li className={styles.item} onClick={this.scrollToGallery}>
+              Signage
+            </li>
             <li className={styles.item}>About</li>
             <li className={styles.item}>Contact</li>
-            <li className={styles.item}>Insta</li>
+            <a
+              href="https://www.instagram.com/?hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <li className={styles.instaItem}>
+                <img className={styles.insta} src={instaIcon} alt="Instagram" />
+              </li>
+            </a>
           </ul>
         )}
       </div>
