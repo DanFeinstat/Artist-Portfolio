@@ -1,7 +1,8 @@
 .btn,
 .menuBtn {
   /* background: #34495e; */
-  background-color: rgb(72, 81, 103);
+  /* background-color: rgb(72, 81, 103); */
+  background-color: rgb(51, 40, 31);
   border: 0;
   color: #fff;
   display: block;
@@ -21,6 +22,7 @@
 }
 
 .menu {
+  font-family: "Times New Roman", Times, serif;
   background: #fff;
   border-radius: 4px;
   list-style-type: none;

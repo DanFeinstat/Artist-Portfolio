@@ -1,16 +1,20 @@
 .btn,
 .menuBtn {
-  background: #34495e;
+  background-color: rgb(51, 40, 31);
   border: 0;
-  color: #fff;
+  color: rgb(239, 239, 235);
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
+  font-size: large;
   display: block;
   width: auto;
   margin-left: 1em;
   border-radius: 4px;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  /* margin-left: 1em; */
   cursor: pointer;
   box-shadow: 1px 2px 8px black;
 }
@@ -20,6 +24,7 @@
 }
 
 .menu {
+  font-family: "Times New Roman", Times, serif;
   background: #fff;
   border-radius: 4px;
   list-style-type: none;

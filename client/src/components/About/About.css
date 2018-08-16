@@ -38,7 +38,9 @@
 .contentContainer {
   height: 80%;
   padding: 1em;
-  background-color: #d1b894;
+  /* background-color: #d1b894; */
+  background-color: #d6c8ba;
+  border-radius: 10px;
 }
 
 .title {

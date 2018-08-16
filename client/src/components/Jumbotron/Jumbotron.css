@@ -6,12 +6,29 @@
   margin: 0;
 }
 .clear {
-  margin-left: 20vw;
+  color: rgb(51, 40, 31);
+  font-family: "Amatic SC", cursive;
+  font-weight: bolder;
+  font-size: 500%;
+  /* margin-left: 20vw; */
   width: 100%;
   float: right;
   clear: right;
   text-align: center;
 }
+.subheading {
+  color: rgb(51, 40, 31);
+  font-family: "Amatic SC", cursive;
+  /* font-weight: bold; */
+  font-size: 300%;
+  margin-left: 10vw;
+  margin-top: 10vh;
+  width: 100%;
+  float: right;
+  clear: right;
+  text-align: center;
+}
+
 .container {
   display: flex;
   justify-content: center;

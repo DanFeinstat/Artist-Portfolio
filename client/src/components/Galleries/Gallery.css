@@ -1,14 +1,15 @@
 .gallery {
   min-height: 80vh;
-  background-color: slategrey;
+  background-color: rgb(239, 239, 235);
 }
 
 .title {
   margin-top: 2em;
   margin-bottom: 2em;
-  width: auto;
+  width: 90%;
   padding: 0.5em;
   text-align: center;
-  color: white;
+  color: rgb(51, 40, 31);
   border-bottom: white solid 2px;
+  font-family: "Amatic SC", cursive;
 }
