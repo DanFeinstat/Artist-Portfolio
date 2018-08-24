@@ -1,22 +1,24 @@
 .jumbo {
   background: url("../../img/photos/squiggly.jpg");
-  /* background-size: cover;
-  background-repeat: no-repeat; */
-  height: 80vh;
-  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  padding: 2rem 1rem;
+  background-color: #e9ecef;
+  padding-right: 0;
+  padding-left: 0;
+  border-radius: 0;
 }
-.clear {
+
+.header {
   color: rgb(51, 40, 31);
   font-family: "Amatic SC", cursive;
   font-weight: bolder;
   font-size: 500%;
-  /* margin-left: 20vw; */
+  margin-top: 25vh;
   width: 100%;
-  float: right;
-  clear: right;
   text-align: center;
 }
-.subheading {
+.subheader {
   color: rgb(51, 40, 31);
   font-family: "Amatic SC", cursive;
   /* font-weight: bold; */
@@ -24,16 +26,9 @@
   margin-left: 10vw;
   margin-top: 10vh;
   width: 100%;
-  float: right;
-  clear: right;
+  /* float: right;
+  clear: right; */
   text-align: center;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
 }
 
 @media (min-width: 769px) {
@@ -43,10 +38,10 @@
     background-repeat: no-repeat;
     height: 80vh;
     margin: 0;
+    /* margin-bottom: 2em; */
   }
 
-  .clear {
+  .header {
     margin-left: 10vw;
-    margin-top: 10vh;
   }
 }

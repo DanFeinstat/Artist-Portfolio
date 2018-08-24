@@ -1,0 +1,113 @@
+.artgrid {
+  display: block;
+  width: 80vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.imageContainer {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin: 10px 0px 10px 0px;
+  height: 20vh;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
+}
+.image {
+  position: relative;
+  text-align: center;
+  height: 20vh;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  opacity: 1;
+  cursor: pointer;
+  filter: brightness(75%);
+}
+
+@media all and (max-height: 376px) {
+  .imageContainer {
+    height: 40vh;
+  }
+  .image {
+    height: 40vh;
+  }
+}
+
+.h2 {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.left {
+  float: left;
+  clear: left;
+}
+
+.right {
+  float: right;
+  clear: right;
+}
+
+.mid {
+  float: left;
+  margin-left: 2.5%;
+}
+
+.full {
+  float: left;
+  width: 100%;
+}
+
+.half {
+  width: 48.75%;
+}
+
+.quart {
+  width: 23.12%;
+}
+
+.sixty {
+  width: 54.5%;
+}
+
+.forty {
+  width: 42.5%;
+}
+
+.xlarge {
+  width: 74.3%;
+}
+
+.large {
+  width: 45.75%;
+}
+
+.med {
+  width: 29%;
+}
+
+.small {
+  width: 20.25%;
+}
+
+.wallp {
+  width: 11.7%;
+}
+
+.wallt {
+  width: 20.59%;
+}
+
+.walld {
+  width: 39.8%;
+}
+
+.wallb {
+  width: 20.8%;
+}

@@ -24,7 +24,7 @@
   -webkit-transition-duration: 300ms;
 }
 
-h2 {
+.h2 {
   opacity: 0;
 }
 
@@ -36,7 +36,7 @@ h2 {
   -webkit-transition-timing-function: ease-out;
   -webkit-transition-duration: 300ms;
 }
-.image:hover h2 {
+.image:hover .h2 {
   color: white;
   opacity: 1;
   -webkit-transition: opacity;
