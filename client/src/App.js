@@ -18,6 +18,8 @@ class App extends Component {
   state = {
     width: window.innerWidth,
     modal: null,
+    email: "",
+    message: "",
   };
   componentWillMount() {
     window.addEventListener("resize", this.handleWindowSizeChange);
@@ -31,6 +33,7 @@ class App extends Component {
     this.setState({ width: window.innerWidth });
   };
 
+  //scroll navigation for nav bar
   scrollToTarget = e => {
     let name = e.target.innerHTML;
     console.log(name);
@@ -38,6 +41,7 @@ class App extends Component {
     galleryDiv.scrollIntoView({ behavior: "smooth" }, true);
   };
 
+  //art modals
   openModal = e => {
     e.preventDefault();
     this.setState({ modal: true });
@@ -47,6 +51,7 @@ class App extends Component {
     this.setState({ modal: null });
   };
 
+  //contact the artist modal
   openContactModal = e => {
     e.preventDefault();
     this.setState({ contactModal: true });
@@ -54,6 +59,29 @@ class App extends Component {
   closeContactModal = e => {
     e.preventDefault();
     this.setState({ contactModal: null });
+  };
+
+  handleInputChange = e => {
+    let value = e.target.value;
+    let name = e.target.name;
+    this.setState({ [name]: value });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    if (!this.state.email && !this.state.message) {
+      this.closeContactModal(e);
+    } else if (!this.state.email) {
+      alert("Please enter your email.");
+    } else if (!this.state.message) {
+      alert("Please enter a message");
+    } else {
+      let validateEmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if (!validateEmail.test(this.state.email)) {
+        alert("That email address is invalid.");
+      }
+      //else do something
+    }
   };
 
   render() {
@@ -89,7 +117,11 @@ class App extends Component {
         {isIpad ? <SmallAbout /> : <About />}
         {this.state.modal ? <Modal onSomeEvent={this.closeModal} /> : null}
         {this.state.contactModal ? (
-          <ContactModal onSomeEvent={this.closeContactModal} />
+          <ContactModal
+            onOutsideClick={this.closeContactModal}
+            handleInput={this.handleInputChange}
+            handleSub={this.handleSubmit}
+          />
         ) : null}
       </div>
     );

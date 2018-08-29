@@ -12,21 +12,8 @@ class DropDownMenu extends React.Component {
 
     this.state = {
       showMenu: false,
-      //   width: window.innerWidth,
     };
   }
-
-  //   componentWillMount() {
-  //     window.addEventListener("resize", this.handleWindowSizeChange);
-  //   }
-
-  //   componentWillUnmount() {
-  //     window.removeEventListener("resize", this.handleWindowSizeChange);
-  //   }
-
-  //   handleWindowSizeChange = () => {
-  //     this.setState({ width: window.innerWidth });
-  //   };
 
   toggleMenu() {
     if (!this.state.showMenu) {
