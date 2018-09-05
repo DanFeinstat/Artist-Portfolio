@@ -15,7 +15,7 @@
   font-weight: bolder;
   font-size: 500%;
   margin-top: 25vh;
-  width: 100%;
+  max-width: 100%;
   text-align: center;
 }
 .subheader {
@@ -25,13 +25,13 @@
   font-size: 300%;
   margin-left: 10vw;
   margin-top: 10vh;
-  width: 100%;
+  width: 90%;
   /* float: right;
   clear: right; */
   text-align: center;
 }
 
-@media (min-width: 769px) {
+@media all and (min-width: 769px) {
   .jumbo {
     background: url("../../img/photos/papers.jpg");
     background-size: cover;
@@ -43,5 +43,13 @@
 
   .header {
     margin-left: 10vw;
+    width: 90vw;
+  }
+}
+
+@media all and (min-width: 1360px) {
+  .header {
+    margin-left: 0vw;
+    width: 100vw;
   }
 }

@@ -6,3 +6,55 @@
   perspective: 1px;
   perspective-origin: 0 0;
 } */
+
+.left {
+  float: left;
+  clear: left;
+}
+
+.right {
+  float: right;
+  clear: right;
+}
+
+.mid {
+  float: left;
+  margin-left: 2.5%;
+}
+
+.full {
+  float: left;
+  width: 100%;
+}
+
+.half {
+  width: 48.75%;
+}
+
+.quart {
+  width: 23.12%;
+}
+
+.sixty {
+  width: 54.5%;
+}
+
+.forty {
+  width: 42.5%;
+}
+
+.xlarge {
+  width: 74.3%;
+}
+
+.large {
+  width: 45.75%;
+}
+
+.med {
+  width: 29%;
+}
+
+.small {
+  width: 20.25%;
+}

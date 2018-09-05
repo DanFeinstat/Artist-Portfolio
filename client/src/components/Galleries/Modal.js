@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./Modal.css";
-import mountain from "../../img/photos/mountain.jpg";
+// import mountain from "../../img/photos/mountain.jpg";
 
 const Modal = props => {
   return (
     <div onClick={props.onSomeEvent}>
       <div className={styles.modal} id="modal">
-        <img className={styles.image} src={mountain} alt="mountain" />
+        <img className={styles.image} src={props.source} alt="mountain" />
       </div>
       <div className={styles.backdrop} id="modal-backdrop" />
     </div>

@@ -10,16 +10,269 @@ import Gallery from "./components/Galleries/Gallery";
 import Thumbnail from "./components/Galleries/Thumbnail";
 import SmallTN from "./components/Galleries/SmallTN";
 import Modal from "./components/Galleries/Modal";
+import Artgrid from "./components/Galleries/Artgrid";
+import TestThumbnail from "./components/Galleries/TestThumbnail";
 import ContactModal from "./components/Contact/ContactModal";
 import About from "./components/About/About";
 import SmallAbout from "./components/About/SmallAbout";
 import styles from "./App.css";
+//images
+import mountain from "./img/photos/mountain.jpg";
+import suitcase from "./img/photos/suitcase.jpg";
+import bicycle from "./img/photos/bicycle.jpg";
+import personBlue from "./img/photos/bluegirl.jpg";
+import personEyes from "./img/photos/eyes.jpg";
+import personPink from "./img/photos/glitterman.jpg";
+import personOrange from "./img/photos/orangegirl.jpg";
+import signHello from "./img/photos/signHello.jpg";
+import signYum from "./img/photos/signYum.jpg";
+import signHangout from "./img/photos/signHangout.jpg";
+
 class App extends Component {
   state = {
     width: window.innerWidth,
     modal: null,
     email: "",
     message: "",
+    galleryArt: [
+      {
+        id: 1,
+        width: null,
+        side: styles.left,
+        source: suitcase,
+        name: "Suitcase",
+      },
+      {
+        id: 2,
+        width: null,
+        side: styles.left,
+        source: bicycle,
+        name: "Bicycle",
+      },
+      {
+        id: 3,
+        width: null,
+        side: styles.left,
+        source: suitcase,
+        name: "Suitcase",
+      },
+      {
+        id: 4,
+        width: null,
+        side: styles.left,
+        source: bicycle,
+        name: "Bicycle",
+      },
+      {
+        id: 5,
+        width: null,
+        side: styles.left,
+        source: suitcase,
+        name: "Suitcase",
+      },
+      {
+        id: 6,
+        width: null,
+        side: styles.left,
+        source: bicycle,
+        name: "Bicycle",
+      },
+      {
+        id: 7,
+        width: null,
+        side: styles.left,
+        source: suitcase,
+        name: "Suitcase",
+      },
+      {
+        id: 8,
+        width: null,
+        side: styles.left,
+        source: bicycle,
+        name: "Bicycle",
+      },
+      {
+        id: 9,
+        width: null,
+        side: styles.left,
+        source: suitcase,
+        name: "Suitcase",
+      },
+    ],
+    illustrations: [
+      {
+        id: 1,
+        width: null,
+        side: styles.left,
+        source: mountain,
+        name: "Mountain",
+      },
+      {
+        id: 2,
+        width: null,
+        side: styles.left,
+        source: mountain,
+        name: "Mountain",
+      },
+      {
+        id: 3,
+        width: null,
+        side: styles.left,
+        source: mountain,
+        name: "Mountain",
+      },
+      {
+        id: 4,
+        width: null,
+        side: styles.left,
+        source: mountain,
+        name: "Mountain",
+      },
+      {
+        id: 5,
+        width: null,
+        side: styles.left,
+        source: mountain,
+        name: "Mountain",
+      },
+      {
+        id: 6,
+        width: null,
+        side: styles.left,
+        source: mountain,
+        name: "Mountain",
+      },
+      {
+        id: 7,
+        width: null,
+        side: styles.left,
+        source: mountain,
+        name: "Mountain",
+      },
+      {
+        id: 8,
+        width: null,
+        side: styles.left,
+        source: mountain,
+        name: "Mountain",
+      },
+      {
+        id: 9,
+        width: null,
+        side: styles.left,
+        source: mountain,
+        name: "Mountain",
+      },
+      {
+        id: 10,
+        width: null,
+        side: styles.left,
+        source: mountain,
+        name: "Mountain",
+      },
+    ],
+    portraiture: [
+      {
+        id: 1,
+        width: null,
+        side: styles.left,
+        source: personOrange,
+        name: "Orange",
+      },
+      {
+        id: 2,
+        width: null,
+        side: styles.left,
+        source: personPink,
+        name: "Pink",
+      },
+      {
+        id: 3,
+        width: null,
+        side: styles.left,
+        source: personEyes,
+        name: "Eyes",
+      },
+      {
+        id: 4,
+        width: null,
+        side: styles.left,
+        source: personBlue,
+        name: "Blue",
+      },
+      {
+        id: 5,
+        width: null,
+        side: styles.left,
+        source: personOrange,
+        name: "Orange",
+      },
+      {
+        id: 6,
+        width: null,
+        side: styles.left,
+        source: personPink,
+        name: "Pink",
+      },
+      {
+        id: 7,
+        width: null,
+        side: styles.left,
+        source: personEyes,
+        name: "Eyes",
+      },
+      {
+        id: 8,
+        width: null,
+        side: styles.left,
+        source: personBlue,
+        name: "Blue",
+      },
+    ],
+    signage: [
+      {
+        id: 1,
+        width: null,
+        side: styles.left,
+        source: signHello,
+        name: "Hello",
+      },
+      {
+        id: 2,
+        width: null,
+        side: styles.left,
+        source: signHangout,
+        name: "Hangout",
+      },
+      {
+        id: 3,
+        width: null,
+        side: styles.left,
+        source: signYum,
+        name: "Yum",
+      },
+      {
+        id: 4,
+        width: null,
+        side: styles.left,
+        source: signYum,
+        name: "Yum",
+      },
+      {
+        id: 5,
+        width: null,
+        side: styles.left,
+        source: signHangout,
+        name: "Hangout",
+      },
+      {
+        id: 6,
+        width: null,
+        side: styles.left,
+        source: signHello,
+        name: "Hello",
+      },
+    ],
   };
   componentWillMount() {
     window.addEventListener("resize", this.handleWindowSizeChange);
@@ -44,7 +297,8 @@ class App extends Component {
   //art modals
   openModal = e => {
     e.preventDefault();
-    this.setState({ modal: true });
+    let source = e.target.src;
+    this.setState({ modal: source });
   };
   closeModal = e => {
     e.preventDefault();
@@ -87,6 +341,115 @@ class App extends Component {
   render() {
     const isMobile = this.state.width <= 667;
     const isIpad = this.state.width <= 769;
+    const mobileGridMap = array => {
+      let renderArray = [];
+      array.map((data, props) => {
+        if (array.length % 2 !== 0 && data.id === array.length) {
+          data.width = styles.full;
+        } else {
+          data.width = styles.half;
+        }
+        if (data.id % 2) {
+          data.side = styles.left;
+        } else {
+          data.side = styles.right;
+        }
+        renderArray.push({
+          key: data.id,
+          side: data.side,
+          width: data.width,
+          source: data.source,
+          name: data.name,
+        });
+      });
+      return renderArray;
+    };
+    const gridMap = array => {
+      let renderArray = [];
+      array.map((data, props) => {
+        if (array.length % 3 === 1 && data.id === array.length) {
+          data.side = styles.left;
+        } else if (array.length % 3 === 2 && data.id === array.length - 1) {
+          data.side = styles.left;
+        } else if (array.length % 3 === 2 && data.id === array.length) {
+          data.side = styles.right;
+        } else if (data.id % 3 === 0) {
+          data.side = styles.right;
+        } else if (data.id % 3 === 1) {
+          data.side = styles.left;
+        } else if (data.id % 3 === 2) {
+          data.side = styles.mid;
+        }
+        if (array.length % 3 === 1 && data.id === array.length) {
+          data.width = styles.full;
+        } else if (array.length % 3 === 2 && data.id > array.length - 2) {
+          data.width = styles.half;
+        } else if (data.id % 3 === 0 && data.id % 9 === 0) {
+          data.width = styles.small;
+        } else if (
+          data.id % 3 === 1 &&
+          (data.id % 9) / 3 > 2 &&
+          (data.id % 9) / 3 <= 3
+        ) {
+          data.width = styles.large;
+        } else if (
+          data.id % 3 === 2 &&
+          (data.id % 9) / 3 > 2 &&
+          (data.id % 9) / 3 <= 3
+        ) {
+          data.width = styles.med;
+        } else if (data.id % 3 === 0 && (data.id % 9) / 3 <= 1) {
+          data.width = styles.med;
+        } else if (data.id % 3 === 1 && (data.id % 9) / 3 <= 1) {
+          data.width = styles.small;
+        } else if (data.id % 3 === 2 && (data.id % 9) / 3 <= 1) {
+          data.width = styles.large;
+        } else if (
+          data.id % 3 === 0 &&
+          (data.id % 9) / 3 > 1 &&
+          (data.id % 9) / 3 <= 2
+        ) {
+          data.width = styles.large;
+        } else if (
+          data.id % 3 === 1 &&
+          (data.id % 9) / 3 > 1 &&
+          (data.id % 9) / 3 <= 2
+        ) {
+          data.width = styles.med;
+        } else if (
+          data.id % 3 === 2 &&
+          (data.id % 9) / 3 > 1 &&
+          (data.id % 9) / 3 <= 2
+        ) {
+          data.width = styles.small;
+        }
+        renderArray.push({
+          key: data.id,
+          side: data.side,
+          width: data.width,
+          source: data.source,
+          name: data.name,
+          // openMod: this.openModal,
+        });
+      });
+      return renderArray;
+    };
+    let galleryArt;
+    let illustrations;
+    let portraiture;
+    let signage;
+    if (isMobile) {
+      galleryArt = mobileGridMap(this.state.galleryArt);
+      illustrations = mobileGridMap(this.state.illustrations);
+      portraiture = mobileGridMap(this.state.portraiture);
+      signage = mobileGridMap(this.state.signage);
+    } else {
+      galleryArt = gridMap(this.state.galleryArt);
+      illustrations = gridMap(this.state.illustrations);
+      portraiture = gridMap(this.state.portraiture);
+      signage = gridMap(this.state.signage);
+    }
+
     return (
       <div className={styles.parallaxContainer}>
         <Navbar
@@ -105,17 +468,73 @@ class App extends Component {
         </Navbar>
         <Jumbotron />
         <Gallery title="Gallery Artwork">
-          {isMobile ? (
-            <SmallTN openMod={this.openModal} />
-          ) : (
-            <Thumbnail openMod={this.openModal} />
-          )}
+          <Artgrid>
+            {galleryArt.map((data, props) => {
+              return (
+                <TestThumbnail
+                  key={data.id}
+                  side={data.side}
+                  width={data.width}
+                  source={data.source}
+                  name={data.name}
+                  openMod={this.openModal}
+                />
+              );
+            })}
+          </Artgrid>
         </Gallery>
-        <Gallery title="Illustrations" />
-        <Gallery title="Portraiture" />
-        <Gallery title="Signage" />
+        <Gallery title="Illustrations">
+          <Artgrid>
+            {illustrations.map((data, props) => {
+              return (
+                <TestThumbnail
+                  key={data.id}
+                  side={data.side}
+                  width={data.width}
+                  source={data.source}
+                  name={data.name}
+                  openMod={this.openModal}
+                />
+              );
+            })}
+          </Artgrid>
+        </Gallery>
+        <Gallery title="Portraiture">
+          <Artgrid>
+            {portraiture.map((data, props) => {
+              return (
+                <TestThumbnail
+                  key={data.id}
+                  side={data.side}
+                  width={data.width}
+                  source={data.source}
+                  name={data.name}
+                  openMod={this.openModal}
+                />
+              );
+            })}
+          </Artgrid>
+        </Gallery>
+        <Gallery title="Signage">
+          <Artgrid>
+            {signage.map((data, props) => {
+              return (
+                <TestThumbnail
+                  key={data.id}
+                  side={data.side}
+                  width={data.width}
+                  source={data.source}
+                  name={data.name}
+                  openMod={this.openModal}
+                />
+              );
+            })}
+          </Artgrid>
+        </Gallery>
         {isIpad ? <SmallAbout /> : <About />}
-        {this.state.modal ? <Modal onSomeEvent={this.closeModal} /> : null}
+        {this.state.modal ? (
+          <Modal source={this.state.modal} onSomeEvent={this.closeModal} />
+        ) : null}
         {this.state.contactModal ? (
           <ContactModal
             onOutsideClick={this.closeContactModal}
