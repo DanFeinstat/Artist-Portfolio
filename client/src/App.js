@@ -27,6 +27,8 @@ import personOrange from "./img/photos/orangegirl.jpg";
 import signHello from "./img/photos/signHello.jpg";
 import signYum from "./img/photos/signYum.jpg";
 import signHangout from "./img/photos/signHangout.jpg";
+//api route
+import messageApi from "./utils/messageAPI";
 
 class App extends Component {
   state = {
@@ -298,7 +300,13 @@ class App extends Component {
   openModal = e => {
     e.preventDefault();
     let source = e.target.src;
-    this.setState({ modal: source });
+    let name = e.target.alt;
+    this.setState({
+      modal: {
+        src: source,
+        name: name,
+      },
+    });
   };
   closeModal = e => {
     e.preventDefault();
@@ -335,6 +343,13 @@ class App extends Component {
         alert("That email address is invalid.");
       }
       //else do something
+      const newMessage = {
+        email: this.state.email,
+        message: this.state.message,
+      };
+
+      messageApi.sendMessage(newMessage).then(data => {});
+      this.closeContactModal(e);
     }
   };
 
@@ -533,7 +548,11 @@ class App extends Component {
         </Gallery>
         {isIpad ? <SmallAbout /> : <About />}
         {this.state.modal ? (
-          <Modal source={this.state.modal} onSomeEvent={this.closeModal} />
+          <Modal
+            source={this.state.modal.src}
+            name={this.state.modal.name}
+            onSomeEvent={this.closeModal}
+          />
         ) : null}
         {this.state.contactModal ? (
           <ContactModal

@@ -6,7 +6,7 @@ const Modal = props => {
   return (
     <div onClick={props.onSomeEvent}>
       <div className={styles.modal} id="modal">
-        <img className={styles.image} src={props.source} alt="mountain" />
+        <img className={styles.image} src={props.source} alt={props.name} />
       </div>
       <div className={styles.backdrop} id="modal-backdrop" />
     </div>
