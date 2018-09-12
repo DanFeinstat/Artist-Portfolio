@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
+const dotenv = require("dotenv");
 
 const app = express();
 const PORT = 3002;
@@ -11,6 +12,9 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Headers", "Content-type,Authorization");
   next();
 });
+
+//set up dotenv
+dotenv.config({ path: ".env" });
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -23,8 +27,8 @@ app.post("/api/message", function(req, res) {
   console.log(newMessage);
 
   let mailOptions = {
-    from: "artportfoliomailsender@gmail.com",
-    to: "danfeinstatpokemon@gmail.com",
+    from: process.env.SENDING_EMAIL,
+    to: process.env.RECIEVING_EMAIL,
     subject: "Art Portfolio New Message from " + newMessage.email,
     text: newMessage.message,
   };
@@ -42,8 +46,8 @@ let transporter = nodemailer.createTransport({
   port: 587,
   secure: false, // true for 465, false for other ports
   auth: {
-    user: "artportfolioemailsender@gmail.com", // replace by your email to practice
-    pass: "artportdemo", // replace by your-password
+    user: process.env.SENDING_EMAIL, // replace by your email to practice
+    pass: process.env.SE_PASSWORD, // replace by your-password
   },
 });
 
