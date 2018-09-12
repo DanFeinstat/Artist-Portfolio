@@ -4,7 +4,7 @@ const nodemailer = require("nodemailer");
 const dotenv = require("dotenv");
 
 const app = express();
-const PORT = 3002;
+const PORT = process.env.PORT || 3002;
 
 //allow cross origin access
 app.use((req, res, next) => {
