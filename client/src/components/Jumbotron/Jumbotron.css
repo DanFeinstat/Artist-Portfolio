@@ -49,6 +49,7 @@
 
 @media all and (min-width: 1360px) {
   .header {
+    margin-top: 35vh;
     margin-left: 0vw;
     width: 100vw;
   }
