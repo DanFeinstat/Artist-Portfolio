@@ -1,14 +1,22 @@
 {
-  "name": "artportfolio",
+  "name": "artport",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && yarn install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "nodemailer": "^4.6.8",
     "npm": "^6.4.1"
-  },
-  "scripts": {
-    "start": "node server.js",
-    "heroku-postbuild": "cd client && yarn && yarn run build"
   }
 }
