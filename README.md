@@ -1,2 +1,5 @@
 # Artist-Portfolio
-Minimalist artist portfolio page for a friend, built do spec
+
+Simple artist portfolio page for a friend, built do spec with react, node, express, and nodemailer.
+
+DEMO: https://thawing-anchorage-87258.herokuapp.com/
