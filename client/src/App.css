@@ -1,11 +1,41 @@
-/* .parallaxContainer {
-  width: 100%;
-  height: 100%;
+.parallaxWrapper {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
   overflow-y: auto;
+  -webkit-perspective: 1px;
   perspective: 1px;
-  perspective-origin: 0 0;
-} */
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.parallax {
+  -webkit-transform: translateZ(-2px) scale(3.5);
+  transform: translateZ(-2px) scale(3.5);
+  z-index: 1;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.parallaxChildOne {
+  -webkit-transform: translateZ(0.5px) scale(0.8);
+  transform: translateZ(0.5px) scale(0.8);
+}
+
+.parallaxChildTwo {
+  -webkit-transform: translateZ(1px) scale(0.6);
+  transform: translateZ(1px) scale(0.6);
+}
+
+.modalPosition {
+  -webkit-transform: translateZ(2px) scale(0.6);
+  transform: translateZ(2px) scale(0.6);
+}
+.modalBackgroundPosition {
+  -webkit-transform: translateZ(1.9px) scale(0.6);
+  transform: translateZ(1.9px) scale(0.6);
+}
 
 .left {
   float: left;

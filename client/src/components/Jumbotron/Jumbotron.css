@@ -9,6 +9,15 @@
   border-radius: 0;
 }
 
+/* .parallaxChildOne {
+  -webkit-transform: translateZ(0.2px) scale(0.8);
+  transform: translateZ(0.2px) scale(0.8);
+}
+
+.parallaxChildTwo {
+
+} */
+
 .header {
   color: rgb(51, 40, 31);
   font-family: "Amatic SC", cursive;
@@ -24,7 +33,7 @@
   /* font-weight: bold; */
   font-size: 300%;
   margin-left: 10vw;
-  margin-top: 10vh;
+  /* margin-top: 5vh; */
   width: 90%;
   /* float: right;
   clear: right; */

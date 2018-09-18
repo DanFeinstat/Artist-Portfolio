@@ -5,9 +5,7 @@ import instaIcon from "../../img/icons/instagram.svg";
 const Navbar = props => {
   const isMobile = props.width <= 667;
   return (
-    <nav
-      className={styles.nav + " navbar navbar-expand-lg fixed-top navbar-light"}
-    >
+    <nav className={styles.nav}>
       <a href="/">
         <h1 className={styles.logo}>VB</h1>
       </a>

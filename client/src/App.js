@@ -466,7 +466,7 @@ class App extends Component {
     }
 
     return (
-      <div className={styles.parallaxContainer}>
+      <div>
         <Navbar
           width={this.state.width}
           openMod={this.openContactModal}
@@ -481,23 +481,29 @@ class App extends Component {
             <DropDownMenu />
           )}
         </Navbar>
-        <Jumbotron />
-        <Gallery title="Gallery Artwork">
-          <Artgrid>
-            {galleryArt.map((data, props) => {
-              return (
-                <TestThumbnail
-                  key={data.id}
-                  side={data.side}
-                  width={data.width}
-                  source={data.source}
-                  name={data.name}
-                  openMod={this.openModal}
-                />
-              );
-            })}
-          </Artgrid>
-        </Gallery>
+        <div className={styles.parallaxWrapper}>
+          <Jumbotron
+            parallax={styles.parallax}
+            paraChildOne={styles.parallaxChildOne}
+            paraChildTwo={styles.parallaxChildTwo}
+          />
+          <Gallery title="Gallery Artwork">
+            <Artgrid>
+              {galleryArt.map((data, props) => {
+                return (
+                  <TestThumbnail
+                    key={data.id}
+                    side={data.side}
+                    width={data.width}
+                    source={data.source}
+                    name={data.name}
+                    openMod={this.openModal}
+                  />
+                );
+              })}
+            </Artgrid>
+          </Gallery>
+        </div>
         <Gallery title="Illustrations">
           <Artgrid>
             {illustrations.map((data, props) => {
@@ -552,6 +558,8 @@ class App extends Component {
             source={this.state.modal.src}
             name={this.state.modal.name}
             onSomeEvent={this.closeModal}
+            modalPosition={styles.modalPosition}
+            modalBackgroundPosition={styles.modalBackgroundPosition}
           />
         ) : null}
         {this.state.contactModal ? (

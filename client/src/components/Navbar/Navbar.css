@@ -3,19 +3,16 @@
   font-family: "Oleo Script Swash Caps", cursive;
   color: rgb(63, 105, 170);
   text-shadow: 1px 1px 8px black;
+  margin: 1vh;
 }
 
 .btn {
-  /* background: #34495e; */
-  /* background-color: rgb(72, 81, 103); */
   background-color: rgb(51, 40, 31);
   border: 0;
   color: rgb(239, 239, 235);
   font-family: "Amatic SC", cursive;
   font-weight: bold;
   font-size: large;
-  /* color: #fff; */
-  /* float: right; */
   display: block;
   width: auto;
   border-radius: 4px;
@@ -24,7 +21,8 @@
   padding-top: 0.25em;
   padding-bottom: 0.25em;
   margin-left: 1em;
-  /* line-height: 40px; */
+  margin-top: 1vh;
+  margin-bottom: 1vh;
   cursor: pointer;
   box-shadow: 1px 2px 8px black;
 }
@@ -38,15 +36,6 @@
   margin-right: 2em;
 }
 
-@media (min-width: 668px) {
-  .container {
-    margin-right: 5em;
-  }
-  .insta {
-    max-height: 2.7vh;
-  }
-}
-
 .nav {
   float: right;
   display: block;
@@ -54,4 +43,20 @@
   text-decoration: none;
   background-color: rgb(145, 138, 133, 0.85);
   width: 100vw;
+  position: fixed;
+  top: 0;
+  height: 10vh;
+  z-index: 100;
+}
+
+@media (min-width: 668px) {
+  .container {
+    margin-right: 5em;
+  }
+  .insta {
+    max-height: 2.7vh;
+  }
+  .nav {
+    height: 8vh;
+  }
 }
