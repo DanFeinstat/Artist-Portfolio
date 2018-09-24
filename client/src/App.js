@@ -24,9 +24,11 @@ import personBlue from "./img/photos/bluegirl.jpg";
 import personEyes from "./img/photos/eyes.jpg";
 import personPink from "./img/photos/glitterman.jpg";
 import personOrange from "./img/photos/orangegirl.jpg";
-import signHello from "./img/photos/signHello.jpg";
-import signYum from "./img/photos/signYum.jpg";
-import signHangout from "./img/photos/signHangout.jpg";
+import cherryBombRadish from "./img/photos/signage/cherryBombRadish.JPG";
+import frenchRadish from "./img/photos/signage/frenchRadish.JPG";
+import greenMustard from "./img/photos/signage/greenMustard.JPG";
+import redMustard from "./img/photos/signage/redMustard.JPG";
+import shigaTurnip from "./img/photos/signage/shigaTurnip.JPG";
 //api route
 import messageApi from "./utils/messageAPI";
 
@@ -236,43 +238,36 @@ class App extends Component {
         id: 1,
         width: null,
         side: styles.left,
-        source: signHello,
-        name: "Hello",
+        source: cherryBombRadish,
+        name: "Cherry Bomb Radish",
       },
       {
         id: 2,
         width: null,
         side: styles.left,
-        source: signHangout,
-        name: "Hangout",
+        source: frenchRadish,
+        name: "French Radish",
       },
       {
         id: 3,
         width: null,
         side: styles.left,
-        source: signYum,
-        name: "Yum",
+        source: greenMustard,
+        name: "Green Frill Mustard",
       },
       {
         id: 4,
         width: null,
         side: styles.left,
-        source: signYum,
-        name: "Yum",
+        source: redMustard,
+        name: "Red Frilled Mustard",
       },
       {
         id: 5,
         width: null,
         side: styles.left,
-        source: signHangout,
-        name: "Hangout",
-      },
-      {
-        id: 6,
-        width: null,
-        side: styles.left,
-        source: signHello,
-        name: "Hello",
+        source: shigaTurnip,
+        name: "Shiga Turnip",
       },
     ],
   };
