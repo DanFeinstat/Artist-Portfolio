@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Navbar.css";
 import instaIcon from "../../img/icons/instagram.svg";
+import instaIconTwo from "../../img/icons/instaImage.svg";
 
 const Navbar = props => {
   const isMobile = props.width <= 667;
