@@ -17,7 +17,7 @@
   border-radius: 10px;
   opacity: 1;
   cursor: pointer;
-  filter: brightness(75%);
+  filter: brightness(50%);
   object-fit: cover;
 }
 
@@ -30,7 +30,7 @@
   }
 }
 
-@media all and (min-width: 667px) {
+@media all and (min-width: 668px) {
   .image {
     filter: brightness(100%);
   }

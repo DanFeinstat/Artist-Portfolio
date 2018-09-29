@@ -294,8 +294,8 @@ class App extends Component {
   //art modals
   openModal = e => {
     e.preventDefault();
-    let source = e.target.src;
-    let name = e.target.alt;
+    let source = e.target.dataset.source;
+    let name = e.target.dataset.name;
     this.setState({
       modal: {
         src: source,

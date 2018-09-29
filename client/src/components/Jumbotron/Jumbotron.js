@@ -8,7 +8,7 @@ const Jumbotron = props => {
         Victoria Bloedau
       </h1>
       <p className={styles.subheader + " " + props.paraChildTwo}>
-        Artist. Chef. Notable Badass.
+        Artist. Chef. Entrepreneur.
       </p>
     </div>
   );

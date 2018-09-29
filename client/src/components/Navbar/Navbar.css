@@ -60,3 +60,9 @@
     height: 8vh;
   }
 }
+
+@media (max-height: 400px) {
+  .nav {
+    height: 17vh;
+  }
+}

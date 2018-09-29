@@ -11,9 +11,17 @@ const TestThumbnail = props => {
         alt={props.name}
         className={styles.full + " " + styles.image}
         onClick={props.openMod}
-        onContextMenu="return false"
+        data-source={props.source}
+        data-name={props.name}
       />
-      <h2 className={styles.h2}>{props.name}</h2>
+      <h2
+        className={styles.h2}
+        data-source={props.source}
+        data-name={props.name}
+        onClick={props.openMod}
+      >
+        {props.name}
+      </h2>
     </div>
   );
 };
