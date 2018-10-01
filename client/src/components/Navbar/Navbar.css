@@ -3,7 +3,11 @@
   font-family: "Oleo Script Swash Caps", cursive;
   color: rgb(63, 105, 170);
   text-shadow: 1px 1px 8px black;
-  margin: 1vh;
+  height: 36px;
+  margin-left: 36px;
+  margin-top: 15px;
+  margin-bottom: 19px;
+  cursor: pointer;
 }
 
 .btn {
@@ -14,17 +18,44 @@
   font-weight: bold;
   font-size: large;
   display: block;
-  width: auto;
+  width: 64px;
+  height: 36px;
   border-radius: 4px;
   padding-left: 0.5em;
   padding-right: 0.5em;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
   margin-left: 1em;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
+  margin-top: 17px;
+  margin-bottom: 17px;
   cursor: pointer;
   box-shadow: 1px 2px 8px black;
+}
+
+.instaBtn {
+  background-color: rgb(51, 40, 31);
+  border: 0;
+  color: rgb(239, 239, 235);
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
+  font-size: large;
+  display: block;
+  width: 90px;
+  height: 36px;
+  border-radius: 4px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  margin-left: 1em;
+  margin-top: 17px;
+  margin-bottom: 17px;
+  cursor: pointer;
+  box-shadow: 1px 2px 8px black;
+}
+
+.insta {
+  width: 74px;
 }
 
 .container {
@@ -32,37 +63,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 0.5em;
-  margin-right: 2em;
+  height: 70px;
+  margin-right: 24px;
 }
 
 .nav {
-  float: right;
-  display: block;
+  /* float: right; */
+  /* display: block; */
+  /* display: -moz-inline-stack; */
   text-align: center;
   text-decoration: none;
   background-color: rgb(145, 138, 133, 0.85);
   width: 100vw;
   position: fixed;
   top: 0;
-  height: 10vh;
+  height: 70px;
   z-index: 100;
-}
-
-@media (min-width: 668px) {
-  .container {
-    margin-right: 5em;
-  }
-  .insta {
-    max-height: 2.7vh;
-  }
-  .nav {
-    height: 8vh;
-  }
-}
-
-@media (max-height: 400px) {
-  .nav {
-    height: 17vh;
-  }
 }

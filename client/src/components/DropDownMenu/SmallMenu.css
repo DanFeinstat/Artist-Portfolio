@@ -1,57 +1,70 @@
 .btn,
 .menuBtn {
-  /* background: #34495e; */
-  /* background-color: rgb(72, 81, 103); */
-  background-color: rgb(51, 40, 31);
+  background-color: rgb(51, 40, 31, 0);
   border: 0;
-  color: #fff;
+  /* color: rgb(239, 239, 235); */
+  /* font-family: "Amatic SC", cursive; */
+  /* font-weight: bold;
+  font-size: large; */
   display: block;
-  width: auto;
-  margin-left: 1em;
+  width: 50px;
+  height: 40px;
   border-radius: 4px;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  margin-top: 15px;
+  margin-bottom: 15px;
   cursor: pointer;
-  box-shadow: 1px 2px 8px black;
+  /* box-shadow: 1px 2px 8px black; */
 }
 
-.menuBtn {
-  border: 2px solid black;
-}
+/* .menuBtn:focus {
+  background-color: rgb(145, 138, 133, 0.95);
+} */
 
 .menu {
   font-family: "Times New Roman", Times, serif;
   background: #fff;
   border-radius: 4px;
   list-style-type: none;
-  width: 120%;
+  width: 200px;
   padding: 3px;
   position: absolute;
   top: 100%;
+  right: 0px;
   margin-left: 1em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
   border-bottom: 1px solid lightgrey;
   cursor: pointer;
   /* text-align: center; */
 }
 
 .container {
-  width: auto;
+  width: 100%;
   position: relative;
 }
 
 .insta {
-  height: 3vh;
+  height: 23px;
   background-color: grey;
 }
 
 .instaItem {
+  height: 46px;
   border-bottom: 1px solid lightgrey;
   cursor: pointer;
   background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 0px 4px 4px;
 }

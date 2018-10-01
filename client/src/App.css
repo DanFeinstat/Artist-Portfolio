@@ -58,7 +58,7 @@
 }
 
 .half {
-  width: 48.75%;
+  width: 45%;
 }
 
 .quart {
@@ -87,4 +87,26 @@
 
 .small {
   width: 20.25%;
+}
+@media all and (min-width: 378px) {
+  .half {
+    width: 48.75%;
+  }
+  .left {
+    float: left;
+    clear: left;
+  }
+
+  .right {
+    float: right;
+    clear: right;
+    margin-left: 0px;
+  }
+}
+
+@media all and (max-height: 378px) {
+  .half {
+    width: 46%;
+    margin-bottom: 5%;
+  }
 }

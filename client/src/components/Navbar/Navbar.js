@@ -27,7 +27,7 @@ const Navbar = props => {
           </button>
 
           <a
-            className={styles.btn}
+            className={styles.instaBtn}
             href="https://www.instagram.com/?hl=en"
             target="_blank"
             rel="noopener noreferrer"
