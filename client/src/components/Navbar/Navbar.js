@@ -28,7 +28,7 @@ const Navbar = props => {
 
           <a
             className={styles.instaBtn}
-            href="https://www.instagram.com/?hl=en"
+            href="https://www.instagram.com/victoria_aut_mors/"
             target="_blank"
             rel="noopener noreferrer"
           >

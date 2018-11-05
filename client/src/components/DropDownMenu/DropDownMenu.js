@@ -42,6 +42,7 @@ class DropDownMenu extends React.Component {
     console.log(name);
     let galleryDiv = ReactDOM.findDOMNode(document.getElementById(name));
     galleryDiv.scrollIntoView({ behavior: "smooth" }, true);
+    this.toggleMenu();
   };
 
   render() {

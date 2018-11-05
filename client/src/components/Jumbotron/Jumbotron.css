@@ -36,9 +36,9 @@
   font-family: "Amatic SC", cursive;
   /* font-weight: bold; */
   font-size: 300%;
-  margin-left: 10vw;
+  /* margin-left: 10vw; */
   /* margin-top: 5vh; */
-  width: 90%;
+  width: 100%;
   /* float: right;
   clear: right; */
   text-align: center;
@@ -58,12 +58,20 @@
     margin-left: 10vw;
     width: 90vw;
   }
+  .subheader {
+    margin-left: 10vw;
+    width: 90vw;
+  }
 }
 
 @media all and (min-width: 1360px) {
   .header {
     margin-top: 35vh;
     margin-left: 0vw;
+    width: 100vw;
+  }
+  .subheader {
+    margin-left: 0;
     width: 100vw;
   }
 }
